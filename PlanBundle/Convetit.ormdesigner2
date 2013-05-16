@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<orm-designer version="2.1.12.719" name="Convetit" mvc="Symfony2" orm="Doctrine2" uuid="42611316-412b-4424-9967-9b92157c9c26">
+  <module name="MainModule" uuid="9607cc0c-b887-4e3b-8c35-5fd5dbd8a1f8">
+    <entity name="SampleEntity" uuid="24d6f399-2b43-439f-bd17-dbff6893c44a">
+      <field name="id" type="integer" required="true" unique="true" primary="true" auto-increment="true" uuid="5216fd28-99e3-4dca-a9d0-829fd2a64757"/>
+      <field name="name" type="string" size="255" uuid="c718b79c-de1f-4063-9d67-847ba7ba5389"/>
+    </entity>
+  </module>
+  <visual-data>
+    <entity uuid="24d6f399-2b43-439f-bd17-dbff6893c44a" position-x="10" position-y="20"/>
+    <project uuid="42611316-412b-4424-9967-9b92157c9c26" size-x="0" size-x2="331" size-y="0" size-y2="285"/>
+    <module uuid="9607cc0c-b887-4e3b-8c35-5fd5dbd8a1f8" bk-color="4294375930" position-x="61" position-y="72" size-x="11" size-x2="220" size-y="22" size-y2="163"/>
+  </visual-data>
+</orm-designer>

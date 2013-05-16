@@ -1,0 +1,7 @@
+parameters:
+#    plan.example.class: Acme\PlanBundle\Example
+
+services:
+#    plan.example:
+#        class: %plan.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

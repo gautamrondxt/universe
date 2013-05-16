@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+ <head>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/convetit-responsive.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('/css/portrait.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+
+        {% block javascripts %}
+             <script type="text/javascript" src="{{ asset('js/jquery-1.9.1.min.js') }} "></script>
+             <script type="text/javascript" src="{{ asset('js/convetit.js') }} "></script>
+          
+    	{% endblock %}
+		
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		
+		
+    </head>
+    <body>
+       
+        {% block body %}
+			<!-- MENU -->
+			<div class="nav-menu">
+                         	<div class="container">
+				<div class="container menu">
+				  <a href=""><div class="logo"></div></a>
+				  <ul class="menu">
+					<li {% if app.request.get('_route') == 'plans_listing'  %}class="active"{% endif %}><a href="">Membership levels</a></li>
+					<li {% if app.request.get('_route') == 'blog_listing'  %}class="active"{% endif %}><a href="#">Blog</a></li>
+					<li  {% if app.request.get('_route') == 'faqs_page'  %}class="active"{% endif %}><a href="#">FAQ's</a></li>
+					<li  {% if app.request.get('_route') == 'login'  %}class="active"{% endif %}>
+                                        <a href="http://symfony.com/doc/master/components/http_foundation/sessions.html" id="Login">Login</a></li>
+				  </ul>          
+				</div>
+				<div class="border"></div>
+			  </div> 
+			</div> 
+			<!-- MENU -->	
+			
+		{% endblock %}
+		
+		
+	{% block footer %}
+      
+		<!-- FOOTER -->          	
+        <div class="footer">
+        	<div class="container">
+          	<div class="upper">
+            	<div class="social">
+                <a href="#" class="icon"><img src="{{ asset('img/twitter.png') }}"></a>
+                <a href="#" class="icon"><img src="/img/in.png"></a>
+                <a href="#" class="icon"><img src="/img/facebook.png"></a>
+	            </div>
+  	          <div class="home">
+                <a href="#" class="icon"><img src="{{ asset('/img/home.png') }}"></a>
+                <span class="location">Palo Alto, CA<br>California</span>
+                <span class="address">Tel. 123-2349-2098<br>Mo - Fr 09:00am - 05:00pm</span>
+	            </div>
+              <div class="contact">
+                <a href="#" class="icon"><img src="/img/contact.png"></a>
+                <input type="text" placeholder="Contact Us: your-email@domain.com">
+                <a href="#" class="submit"></a>
+              </div>
+	          </div>
+  	        <div class="lower">
+              <span class="copyright">Convetit.com / All rights reserved / 2013</span>
+              <span class="terms"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact Us</a></span>          
+            </div>        
+	        </div>
+  	    </div>
+        <!-- FOOTER -->
+		
+	{% endblock %}
+	
+	
+		
+    </body>
+</html>

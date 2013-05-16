@@ -1,0 +1,3 @@
+plan_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: PlanBundle:Default:index }
